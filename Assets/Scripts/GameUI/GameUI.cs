@@ -11,7 +11,7 @@ public class GameUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _playerAmmo;
 
     [Header("Prefabs Reference")]
-    [SerializeField] private HealthComponent _player = new HealthComponent();
+    [SerializeField] private HealthComponent _player;
 
     void Update()
     {
