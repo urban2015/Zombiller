@@ -12,8 +12,7 @@ public class shooting : MonoBehaviour
     // Delay until bullet deletes
     public float delay = 5f;
     //Time Between Shoots
-    [SerializeField] private float rateOfFire = .5f;
-    [SerializeField] private bool auto = true;
+    [SerializeField] private float rateOfRire = .5f;
     private float waitTime;
     //Ammo Related 
     public static int playerAmmo = 10;
@@ -21,15 +20,13 @@ public class shooting : MonoBehaviour
     void Update()
     {
         // Shoot when fire button is pressed
-        if (auto){
-            if (Input.GetButton("Fire1"))
+        if (Input.GetButtonDown("Fire1"))
+        {
+            if(waitTime < Time.time && playerAmmo > 0)
             {
-                HandleShooting();
-            }
-        } else {
-            if (Input.GetButtonDown("Fire1"))
-            {
-                HandleShooting();
+                Shoot();
+                playerAmmo--;
+                waitTime = Time.time + rateOfRire;
             }
         }
     }
@@ -42,14 +39,5 @@ public class shooting : MonoBehaviour
         bulletRB.AddForce(- gunPoint.up * bulletspeed, ForceMode2D.Impulse);
         // Destroy the bullet after the delay
         Object.Destroy(bullet, delay);
-    }
-
-    void HandleShooting(){
-        if(waitTime < Time.time && playerAmmo > 0)
-        {
-            Shoot();
-            playerAmmo--;
-            waitTime = Time.time + rateOfFire;
-        }
     }
 }

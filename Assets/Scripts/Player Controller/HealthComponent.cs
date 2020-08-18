@@ -9,30 +9,19 @@ class HealthComponent : MonoBehaviour
 {
     [SerializeField] private float maxHp;
     [SerializeField] private float hpRegeneratedPerSecond;
-    [SerializeField] private float HealthPackRate;
-    public static float HealthPackHpToAdd = 0;
     public Health _health;
     private void Start()
     {
         _health = new Health(maxHp, maxHp);
         StartCoroutine(RegenHealth());
     }
-    
+
     private IEnumerator RegenHealth()
     {
         while (true)
         {
             yield return new WaitForSeconds(1f);
             if (_health.IsDepleted) yield break;
-            if (HealthPackHpToAdd > 0){
-                if (HealthPackHpToAdd > HealthPackRate){
-                    HealthPackHpToAdd -= HealthPackRate;
-                    _health = _health.Regenerate(HealthPackRate); 
-                } else {
-                    _health = _health.Regenerate(HealthPackHpToAdd);
-                    HealthPackHpToAdd = 0;
-                }
-            }
             _health = _health.Regenerate(hpRegeneratedPerSecond);
         }
     }
