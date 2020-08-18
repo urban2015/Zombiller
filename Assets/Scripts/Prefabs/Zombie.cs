@@ -5,7 +5,7 @@ public class Zombie : MonoBehaviour
 {
     //Calculation Variables
     [SerializeField] private float _zombieSpeed = 1;
-    private float _distanceToStopFromPlayer = .5f;
+    private float _distanceToStopFromPlayer = 0.5f;
 
     //Custom classes Referece
     private FollowPlayer _zombie = new FollowPlayer();
@@ -57,6 +57,8 @@ class FollowPlayer //Handles the following of the player and stoping at certain 
         if (Vector2.Distance(zombie.position, player.position) > distanceToStop)
         {
             zombie.position = StartFollowing(zombie, player, zombieSpeed);
+        } else {
+            //ATTACK GOES HERE
         }
     }
 }
