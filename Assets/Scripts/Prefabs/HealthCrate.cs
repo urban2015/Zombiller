@@ -4,7 +4,7 @@ public class HealthCrate: MonoBehaviour
 {
     [SerializeField] private int healthCrateAmmount = 20;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.CompareTag("Player"))
         {

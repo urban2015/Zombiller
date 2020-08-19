@@ -24,7 +24,7 @@ public abstract class SpawnSystem : MonoBehaviour
         while (gameisActive)
         {
             yield return new WaitForSeconds(_spawnRate);
-            Vector2 randomPositionY = new Vector2(Random.Range(_ScreenXLimit, -_ScreenXLimit), Random.Range(_ScreenYLimit, -_ScreenYLimit));
+            Vector3 randomPositionY = new Vector3(Random.Range(_ScreenXLimit, -_ScreenXLimit), 0.5f, Random.Range(_ScreenYLimit, -_ScreenYLimit)); //0.5 temporarily 
             Instantiate(_prefab, randomPositionY, _prefab.transform.rotation);
         }
     }

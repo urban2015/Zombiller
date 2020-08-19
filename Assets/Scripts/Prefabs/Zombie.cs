@@ -33,7 +33,7 @@ public class Zombie : MonoBehaviour
         _zombie.StopDistance(_player, transform, _distanceToStopFromPlayer, _zombieSpeed);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.CompareTag("Bullet"))
         {
@@ -46,15 +46,15 @@ public class Zombie : MonoBehaviour
 
 class FollowPlayer //Handles the following of the player and stoping at certain distance
 {
-    private Vector2 StartFollowing(Transform zombie, Transform player, float zombieSpeed)
+    private Vector3 StartFollowing(Transform zombie, Transform player, float zombieSpeed)
     {
-       Vector2 _follow = Vector2.MoveTowards(zombie.position, player.position, zombieSpeed * Time.deltaTime);
+       Vector3 _follow = Vector3.MoveTowards(zombie.position, player.position, zombieSpeed * Time.deltaTime);
         return _follow;
     }
 
     public void StopDistance(Transform player, Transform zombie, float distanceToStop, float zombieSpeed)
     {
-        if (Vector2.Distance(zombie.position, player.position) > distanceToStop)
+        if (Vector3.Distance(zombie.position, player.position) > distanceToStop)
         {
             zombie.position = StartFollowing(zombie, player, zombieSpeed);
         } else {

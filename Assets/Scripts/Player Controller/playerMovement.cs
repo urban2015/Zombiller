@@ -10,10 +10,10 @@ public class playerMovement : MonoBehaviour
     public float walkSpeed = 3f;
     public float runSpeed = 5f;
 
-    Vector2 movementDirection;
-    Vector2 target;
+    Vector3 movementDirection;
+    Vector3 target;
 
-    public Rigidbody2D rb;
+    public Rigidbody rb;
 
     public Camera playerCam;
 
@@ -24,12 +24,12 @@ public class playerMovement : MonoBehaviour
         float y = Input.GetAxisRaw("Vertical");
 
         // Vector using input directions (normalized)
-        movementDirection = new Vector2(x, y).normalized;
+        movementDirection = new Vector3(x, 0, y).normalized;
 
         Run();
 
         // Find where the mouse is on the screen
-        target = playerCam.ScreenToWorldPoint(Input.mousePosition);
+        target = Input.mousePosition;
     }
 
     void FixedUpdate()
@@ -38,11 +38,12 @@ public class playerMovement : MonoBehaviour
         rb.MovePosition(rb.position + movementDirection * speed * Time.fixedDeltaTime);
 
         // Find the vector direction from the player to the target
-        Vector2 direction = target - rb.position;
+        Vector3 direction = target - playerCam.WorldToScreenPoint(transform.position);
         // Find the angle at which the player needs to rotate to face the direction vector
-        float turnAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90f;
+        float turnAngle = -(Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90f);
         // Rotate the player
-        rb.rotation = turnAngle;
+        transform.eulerAngles = new Vector3(0, turnAngle, 0);
+        //Debug.Log(new Vector3(0, turnAngle, 0));
     }
 
     void Run()
