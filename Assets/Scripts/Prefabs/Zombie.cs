@@ -31,6 +31,7 @@ public class Zombie : MonoBehaviour
     void Update()
     {
         _zombie.StopDistance(_player, transform, _distanceToStopFromPlayer, _zombieSpeed);
+        _zombie.LookAt(_player, transform);
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -60,6 +61,12 @@ class FollowPlayer //Handles the following of the player and stoping at certain 
         } else {
             //ATTACK GOES HERE
         }
+    }
+
+    public void LookAt(Transform target, Transform zombie){
+        Vector3 direction = target.position - zombie.position;
+        float turnAngle = -(Mathf.Atan2(direction.z, direction.x) * Mathf.Rad2Deg + 90f);
+        zombie.eulerAngles = new Vector3(0, turnAngle, 0);
     }
 }
 
