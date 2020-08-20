@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunPoint: {fileID: 2110873034161884603}
-  bulletPrefab: {fileID: 1543360365359112079, guid: 3133279c770b4c74e8c70d107be5d55e,
+  bulletPrefab: {fileID: 7571114622507737715, guid: 5c51a42b14017a646849dc933a7ce42d,
     type: 3}
   bulletspeed: 15
   delay: 5
