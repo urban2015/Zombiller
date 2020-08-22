@@ -49,6 +49,9 @@
      <Compile Include="Assets\Scripts\GameUI\GameUI.cs" />
      <Compile Include="Assets\Scripts\Spawner\SpawnSystem.cs" />
      <Compile Include="Assets\Scripts\Player Controller\shooting.cs" />
+     <Compile Include="Assets\Scripts\Player Controller\GunManager.cs" />
+     <Compile Include="Assets\Scripts\Player Controller\Gun.cs" />
+     <Compile Include="Assets\Scripts\Prefabs\Target.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />

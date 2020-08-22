@@ -40,7 +40,7 @@ public class playerMovement : MonoBehaviour
         // Find the vector direction from the player to the target
         Vector3 direction = target - playerCam.WorldToScreenPoint(transform.position);
         // Find the angle at which the player needs to rotate to face the direction vector
-        float turnAngle = -(Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90f);
+        float turnAngle = -(Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90);
         // Rotate the player
         transform.eulerAngles = new Vector3(0, turnAngle, 0);
         //Debug.Log(new Vector3(0, turnAngle, 0));

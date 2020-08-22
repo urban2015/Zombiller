@@ -39,7 +39,7 @@ public class shooting : MonoBehaviour
         // Instantiate bullet at the spawnpoint and add an upwards force
         GameObject bullet = Instantiate(bulletPrefab, gunPoint.position, gunPoint.rotation);
         Rigidbody bulletRB = bullet.GetComponent<Rigidbody>();
-        bulletRB.AddForce(- gunPoint.forward * bulletspeed, ForceMode.Impulse);
+        bulletRB.AddForce(gunPoint.forward * bulletspeed, ForceMode.Impulse);
         // Destroy the bullet after the delay
         Object.Destroy(bullet, delay);
     }
