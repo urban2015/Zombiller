@@ -15,6 +15,8 @@
           </e>
           <e p="Player Controller" t="Include">
             <e p="BaseClass.cs" t="Include" />
+            <e p="DamageComponent.cs" t="Include" />
+            <e p="DeathComponent.cs" t="Include" />
             <e p="Gun.cs" t="Include" />
             <e p="GunManager.cs" t="Include" />
             <e p="HealthComponent.cs" t="Include" />
@@ -22,6 +24,12 @@
             <e p="shooting.cs" t="Include" />
             <e p="SimpleRotator.cs" t="Include" />
             <e p="Target.cs" t="Include" />
+          </e>
+          <e p="Scriptable Objects" t="Include">
+            <e p="Crate_SO.cs" t="Include" />
+            <e p="Player_SO.cs" t="Include" />
+            <e p="Weapon_SO.cs" t="Include" />
+            <e p="Zombie_SO.cs" t="Include" />
           </e>
           <e p="Spawner" t="Include">
             <e p="Crates" t="Include">

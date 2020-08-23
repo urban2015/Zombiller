@@ -10,6 +10,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Controller/DeathComponent.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -22,6 +25,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameUI/StartGameButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameUI/GameButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Prefabs/Zombie.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scriptable Objects/Weapon_SO.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scriptable Objects/Player_SO.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scriptable Objects/Crate_SO.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scriptable Objects/Zombie_SO.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player Controller/DamageComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player Controller/DeathComponent.cs" />
       </list>
     </option>
   </component>
@@ -71,6 +80,7 @@
       <updated>1598138259917</updated>
       <workItem from="1598138440555" duration="609000" />
       <workItem from="1598139203341" duration="3890000" />
+      <workItem from="1598218691179" duration="2770000" />
     </task>
     <servers />
   </component>
