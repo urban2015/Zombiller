@@ -6495,11 +6495,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03cd428811708d5408fdb0a8fc23bc2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: {fileID: 0}
-  clibAmmo: {fileID: 0}
-  ammo: {fileID: 0}
-  weaponName: {fileID: 0}
-  zombieLeft: {fileID: 0}
+  hp: {fileID: 1566324686}
+  clibAmmo: {fileID: 1239466513}
+  ammo: {fileID: 826137262}
+  weaponName: {fileID: 1721709760}
+  zombieLeft: {fileID: 173655040}
   hpComponent: {fileID: 921633052}
   gunManager: {fileID: 765855073}
 --- !u!1 &9030332555945056779
