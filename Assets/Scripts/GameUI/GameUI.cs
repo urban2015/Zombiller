@@ -1,41 +1,42 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class GameUI : MonoBehaviour
+namespace GameUI
 {
-    [Header("GameUI References")]
-    [SerializeField] private Text HP;
-    [SerializeField] private Text ClibAmmo;
-    [SerializeField] private Text Ammo;
-    [SerializeField] private Text WeaponName;
-    [SerializeField] private Text ZombieLeft;
-
-    int weaponIndex = 0;
-    Gun weapon;
-
-    [Header("Prefabs Reference")]
-    [SerializeField] private HealthComponent hpComponent;
-    [SerializeField] private GunManager gunManager;
-
-    void Start(){
-        weaponIndex = gunManager.selectedWeapon;
-        weapon = gunManager.weaponHandlerObject.transform.GetChild(weaponIndex).transform.GetComponent<Gun>();
-    }
-    void Update()
+    public class GameUI : MonoBehaviour
     {
-        HP.text =  (hpComponent != null ? hpComponent._health.Current + " HP" : "null"); //edit: checks to make sure the player isn't null when we update the player health text
+        [Header("GameUI References")]
+        [SerializeField] private Text hp;
+        [SerializeField] private Text clibAmmo;
+        [SerializeField] private Text ammo;
+        [SerializeField] private Text weaponName;
+        [SerializeField] private Text zombieLeft;
 
-        if (weaponIndex != gunManager.selectedWeapon || weapon == null){
-            weaponIndex = gunManager.selectedWeapon;
-            weapon = gunManager.weaponHandlerObject.transform.GetChild(weaponIndex).transform.GetComponent<Gun>();
+        int _weaponIndex = 0;
+        Gun _weapon;
+
+        [Header("Prefabs Reference")]
+        [SerializeField] private HealthComponent hpComponent;
+        [SerializeField] private GunManager gunManager;
+
+        void Start(){
+            _weaponIndex = gunManager.selectedWeapon;
+            _weapon = gunManager.weaponHandlerObject.transform.GetChild(_weaponIndex).transform.GetComponent<Gun>();
         }
+        void Update()
+        {
+            hp.text =  (hpComponent != null ? hpComponent.Health.Current + " HP" : "null"); //edit: checks to make sure the player isn't null when we update the player health text
 
-        WeaponName.text = weapon.weaponName;
-        ClibAmmo.text = weapon.currentClibAmmo.ToString();
-        Ammo.text = weapon.currentAmmo.ToString();
+            if (_weaponIndex != gunManager.selectedWeapon || _weapon == null){
+                _weaponIndex = gunManager.selectedWeapon;
+                _weapon = gunManager.weaponHandlerObject.transform.GetChild(_weaponIndex).transform.GetComponent<Gun>();
+            }
 
-        ZombieLeft.text = NumberOfZombies.EnemiesInScene.ToString();
+            weaponName.text = _weapon.weaponName;
+            clibAmmo.text = _weapon.currentClibAmmo.ToString();
+            ammo.text = _weapon.currentAmmo.ToString();
+
+            zombieLeft.text = NumberOfZombies.EnemiesInScene.ToString();
+        }
     }
 }
