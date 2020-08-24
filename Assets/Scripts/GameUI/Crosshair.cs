@@ -11,14 +11,12 @@ public class Crosshair : MonoBehaviour
     public Sprite defaultCrosshair, defaultReloadingCrosshair, defaultOutOfAmmoCrosshair;
     int weaponIndex = 0;
 
+
     // Start is called before the first frame update
     void Start()
     {
-        weaponIndex = gunManager.GetWeaponIndex();
-        try {
-            currentWeapon = gunManager.weaponHandlerObject.transform.GetChild(weaponIndex).GetComponent<Gun>();
-        } catch {};
         crosshairImage = transform.GetComponent<Image>();
+        EnableCrosshair();
     }
 
     // Update is called once per frame
@@ -54,5 +52,15 @@ public class Crosshair : MonoBehaviour
             crosshairImage.overrideSprite = defaultCrosshair;
         }
 
+    }
+
+    void EnableCrosshair(){
+        Cursor.visible = false;
+        crosshairImage.enabled = true;
+    }
+
+    void DisableCrosshair(){
+        Cursor.visible = true;
+        crosshairImage.enabled = false;
     }
 }
