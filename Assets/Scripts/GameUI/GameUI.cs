@@ -28,7 +28,7 @@ namespace GameUI
             hp.text =  (hpComponent != null ? hpComponent.Health.Current + " HP" : "null"); //edit: checks to make sure the player isn't null when we update the player health text
 
             if (_weaponIndex != gunManager.selectedWeapon || _weapon == null){
-                _weaponIndex = gunManager.selectedWeapon;
+                _weaponIndex = gunManager.GetWeaponIndex();
                 _weapon = gunManager.weaponHandlerObject.transform.GetChild(_weaponIndex).transform.GetComponent<Gun>();
             }
 

@@ -73,4 +73,8 @@ public class GunManager : MonoBehaviour
     public void PreviousWeapon(){
         SelectWeapon(selectedWeapon - 1);
     }
+
+    public int GetWeaponIndex(){
+        return currentWeapons[selectedWeapon]; 
+    }
 }
