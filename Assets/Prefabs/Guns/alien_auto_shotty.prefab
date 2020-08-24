@@ -708,12 +708,19 @@ MonoBehaviour:
   maxAmmo: 300
   currentAmmo: -1
   currentClibAmmo: -1
+  burstAmount: 3
+  burstDelay: 0.2
   reloadTime: 1.5
   damage: 26
   fireRate: 0.05
+  normalCrosshair: {fileID: 0}
+  reloadingCrosshair: {fileID: 0}
+  outOfAmmoCrosshair: {fileID: 0}
   customPosition: {x: -0.003613327, y: 0.0442, z: -0.002299668}
   customRoation: {x: 7.427, y: -72.358, z: -78.154}
   rayCastPoint: {fileID: 0}
+  crosshairRenderer: {fileID: 0}
+  isReloading: 0
 --- !u!1 &6066253203827163093
 GameObject:
   m_ObjectHideFlags: 0
