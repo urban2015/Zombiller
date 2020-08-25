@@ -17,13 +17,19 @@ public class Gun : MonoBehaviour
     [HideInInspector]public int burstAmount = 3; 
     [HideInInspector]public float burstDelay = 1;
     public float reloadTime, damage, fireRate;
-    public Sprite normalCrosshair, reloadingCrosshair, outOfAmmoCrosshair;
+    [Header("Crosshair")]
+    public Sprite normalCrosshair; 
+    public Sprite reloadingCrosshair, outOfAmmoCrosshair;
+    [Header("Custom")]
     [SerializeField]private Vector3 customPosition;
     [SerializeField]private Vector3 customRoation;
     [HideInInspector]public Transform rayCastPoint;
     [HideInInspector]public SpriteRenderer crosshairRenderer;
     [HideInInspector]public bool isReloading = false;
     bool canShoot = true, canBurst = true;
+    [Header("Animation Clibs")]
+    public AnimationClip animIdle;
+    public AnimationClip animWalk, animRun;
     
     // Start is called before the first frame update
     void Start()

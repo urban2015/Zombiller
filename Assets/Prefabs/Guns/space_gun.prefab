@@ -510,8 +510,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6229198790329436137}
-  m_LocalRotation: {x: 0.6173408, y: 0.06754226, z: 0.023933524, w: 0.78342557}
-  m_LocalPosition: {x: 0.00193, y: 0.00795, z: -0.00611}
+  m_LocalRotation: {x: 0.7228827, y: 0.24033552, z: 0.48306376, w: 0.43165827}
+  m_LocalPosition: {x: -0.00548, y: 0.00558, z: -0.00024}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children:
   - {fileID: 470998964824121481}
@@ -529,7 +529,7 @@ Transform:
   - {fileID: 2909868476645962885}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 74.59, y: 30.628, z: 27.062}
+  m_LocalEulerAnglesHint: {x: 23.072, y: 100.056, z: 123.801}
 --- !u!114 &6308872541070276557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -548,12 +548,22 @@ MonoBehaviour:
   maxAmmo: 80
   currentAmmo: -1
   currentClibAmmo: -1
+  burstAmount: 3
+  burstDelay: 1
   reloadTime: 3
   damage: 60
   fireRate: 0
-  customPosition: {x: 0.00193, y: 0.00795, z: -0.00611}
-  customRoation: {x: 74.59, y: 30.628, z: 27.062}
+  normalCrosshair: {fileID: 0}
+  reloadingCrosshair: {fileID: 0}
+  outOfAmmoCrosshair: {fileID: 0}
+  customPosition: {x: -0.00548, y: 0.00558, z: -0.00024}
+  customRoation: {x: 23.072, y: 100.056, z: 123.801}
   rayCastPoint: {fileID: 0}
+  crosshairRenderer: {fileID: 0}
+  isReloading: 0
+  animIdle: {fileID: 0}
+  animWalk: {fileID: 7400000, guid: ce4439ec97066a44aa8bf190af3e95d5, type: 2}
+  animRun: {fileID: 7400000, guid: ce4439ec97066a44aa8bf190af3e95d5, type: 2}
 --- !u!1 &7082368350438752218
 GameObject:
   m_ObjectHideFlags: 0

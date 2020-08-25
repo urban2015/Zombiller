@@ -2,19 +2,19 @@
 
 public class AmmoCrate: MonoBehaviour
 {
-    [SerializeField] private int ammoCrateAmmount = 20;
-
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.CompareTag("Player"))
         {
-            RessuplyAmmo(ammoCrateAmmount);
+            RessuplyAmmo(collision.gameObject);
             Destroy(gameObject);
         }
     }
 
-    private void RessuplyAmmo(int ammountToRessuply) //When trigger player ammo goes up.
+    private void RessuplyAmmo(GameObject player) //When trigger player ammo goes up.
     {
-        shooting.playerAmmo += ammountToRessuply;
+        GunManager gunManager = player.GetComponent<GunManager>();
+        Gun gun = gunManager.weaponHandlerObject.transform.GetChild(gunManager.GetWeaponIndex()).GetComponent<Gun>();
+        gun.currentAmmo = gun.maxAmmo;
     }
 }

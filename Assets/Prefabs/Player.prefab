@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 2110873033611202572}
   - component: {fileID: 2110873033611202568}
   - component: {fileID: 1716461488406962611}
+  - component: {fileID: 1945404969820429585}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -115,6 +116,7 @@ MonoBehaviour:
   runSpeed: 5
   rb: {fileID: 2110873033611202572}
   playerCam: {fileID: 0}
+  anim: {fileID: 1945404969820429585}
 --- !u!114 &2110873033611202573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,7 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHp: 100
   hpRegeneratedPerSecond: 2
-  HealthPackRate: 10
+  healthPackRate: 0
 --- !u!54 &2110873033611202572
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -172,10 +174,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponsPrefabs: []
-  weaponHandlerObject: {fileID: 0}
-  rayCastPoint: {fileID: 0}
+  weaponHandlerObject: {fileID: 2981993411319352994}
+  rayCastPoint: {fileID: 2110873034161884600}
   currentWeapons: 0000000001000000
   selectedWeapon: 0
+--- !u!114 &1945404969820429585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110873033611202614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7067a3c7f4f8a1c46bd24d2d5296dc03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animIdle: {fileID: 7400000, guid: 00cd2572d1a421c47b47e6e575f21c1f, type: 2}
+  animWalk: {fileID: 7400000, guid: f3d6825cf1080774e942f6a03ce2ef79, type: 2}
+  animRun: {fileID: 7400000, guid: ce4439ec97066a44aa8bf190af3e95d5, type: 2}
+  currentAnim: 0
+  playerAnimator: {fileID: 6116133688869454978}
+  aoc: {fileID: 22100000, guid: ed75b14c6caa4484f82151ca2a6bc027, type: 2}
 --- !u!1 &2110873034161884600
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,6 +453,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7629993661434616386}
+  - component: {fileID: 6116133688869454978}
   m_Layer: 0
   m_Name: Low_Poly_Guy
   m_TagString: Untagged
@@ -456,6 +477,25 @@ Transform:
   m_Father: {fileID: 2110873033611202569}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &6116133688869454978
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5187773215630092346}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2b0766129c5a23d408249a1aa84b86da, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5453567207565338889
 GameObject:
   m_ObjectHideFlags: 0

@@ -721,6 +721,9 @@ MonoBehaviour:
   rayCastPoint: {fileID: 0}
   crosshairRenderer: {fileID: 0}
   isReloading: 0
+  animIdle: {fileID: 0}
+  animWalk: {fileID: 0}
+  animRun: {fileID: 0}
 --- !u!1 &6066253203827163093
 GameObject:
   m_ObjectHideFlags: 0

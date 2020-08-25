@@ -37,7 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Spawner\Zombiers\ZSpawner.cs" />
-     <Compile Include="Assets\Scripts\Player Controller\playerMovement.cs" />
+     <Compile Include="Assets\Scripts\Player Controller\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Scriptable Objects\Zombie_SO.cs" />
      <Compile Include="Assets\Scripts\Player Controller\BaseClass.cs" />
      <Compile Include="Assets\Scripts\Zombies\Zombie.cs" />
@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\Player Controller\HealthComponent.cs" />
      <Compile Include="Assets\Scripts\Spawner\Crates\AmmoCrateSpawner.cs" />
      <Compile Include="Assets\Scripts\Scriptable Objects\Player_SO.cs" />
+     <Compile Include="Assets\Scripts\Player Controller\PlayerAnimation.cs" />
      <Compile Include="Assets\Scripts\Player Controller\SimpleCameraFollow.cs" />
      <Compile Include="Assets\Scripts\GameUI\GameUI.cs" />
      <Compile Include="Assets\Scripts\Spawner\SpawnSystem.cs" />

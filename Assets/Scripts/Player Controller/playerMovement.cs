@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     // Player's current speed
     public float speed;
@@ -16,6 +16,7 @@ public class playerMovement : MonoBehaviour
     public Rigidbody rb;
 
     public Camera playerCam;
+    public PlayerAnimation anim;
 
     void Update()
     {
@@ -28,6 +29,10 @@ public class playerMovement : MonoBehaviour
 
         Run();
 
+        if (x == 0 && y == 0){
+            anim.currentAnim = PlayerAnimation.Anim.Idle;
+        }
+        
         // Find where the mouse is on the screen
         target = Input.mousePosition;
     }
@@ -51,10 +56,12 @@ public class playerMovement : MonoBehaviour
         // Detect if the player is running
         if (Input.GetKey(KeyCode.LeftShift))
         {
+            anim.currentAnim = PlayerAnimation.Anim.Run;
             speed = runSpeed;
         }
         else
         {
+            anim.currentAnim = PlayerAnimation.Anim.Walk;
             speed = walkSpeed;
         }
     }

@@ -28,7 +28,6 @@ public class Crosshair : MonoBehaviour
         if (weaponIndex != gunManager.selectedWeapon || currentWeapon == null){
             weaponIndex = gunManager.selectedWeapon;
             currentWeapon = gunManager.weaponHandlerObject.transform.GetChild(weaponIndex).GetComponent<Gun>();
-            Debug.Log(currentWeapon);
         }
 
         //check what crosshair to show
