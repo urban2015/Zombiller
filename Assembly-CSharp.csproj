@@ -37,7 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Spawner\Zombiers\ZSpawner.cs" />
-     <Compile Include="Assets\Scripts\Player Controller\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Player Controller\playerMovement.cs" />
      <Compile Include="Assets\Scripts\Scriptable Objects\Zombie_SO.cs" />
      <Compile Include="Assets\Scripts\Player Controller\BaseClass.cs" />
      <Compile Include="Assets\Scripts\Zombies\Zombie.cs" />
