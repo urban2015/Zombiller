@@ -18,7 +18,6 @@ public class PlayerAnimation : MonoBehaviour
         gunManager = GetComponent<GunManager>();
         setAnim();
         weaponIndex = gunManager.GetWeaponIndex();
-        updateAnimationClibs();
         aoc = new AnimatorOverrideController(playerAnimator.runtimeAnimatorController);
     }
 
