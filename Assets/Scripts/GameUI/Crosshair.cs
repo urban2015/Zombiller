@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class Crosshair : MonoBehaviour
 {
-    [SerializeField]GunManager gunManager;
+    [SerializeField]WeaponManager gunManager;
     Image crosshairImage;
-    Gun currentWeapon;
+    Weapon currentWeapon;
     public Sprite defaultCrosshair, defaultReloadingCrosshair, defaultOutOfAmmoCrosshair;
     int weaponIndex = 0;
 
@@ -27,7 +27,7 @@ public class Crosshair : MonoBehaviour
         //update current weapon if changed
         if (weaponIndex != gunManager.selectedWeapon || currentWeapon == null){
             weaponIndex = gunManager.selectedWeapon;
-            currentWeapon = gunManager.weaponHandlerObject.transform.GetChild(weaponIndex).GetComponent<Gun>();
+            currentWeapon = gunManager.weaponHandlerObject.transform.GetChild(weaponIndex).GetComponent<Weapon>();
         }
 
         //check what crosshair to show

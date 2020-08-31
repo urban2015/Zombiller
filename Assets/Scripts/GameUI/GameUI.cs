@@ -13,15 +13,15 @@ namespace GameUI
         [SerializeField] private Text zombieLeft;
 
         int _weaponIndex = 0;
-        Gun _weapon;
+        Weapon _weapon;
 
         [Header("Prefabs Reference")]
         [SerializeField] private HealthComponent hpComponent;
-        [SerializeField] private GunManager gunManager;
+        [SerializeField] private WeaponManager gunManager;
 
         void Start(){
             _weaponIndex = gunManager.selectedWeapon;
-            _weapon = gunManager.weaponHandlerObject.transform.GetChild(_weaponIndex).transform.GetComponent<Gun>();
+            _weapon = gunManager.weaponHandlerObject.transform.GetChild(_weaponIndex).transform.GetComponent<Weapon>();
         }
         void Update()
         {
@@ -29,7 +29,7 @@ namespace GameUI
 
             if (_weaponIndex != gunManager.selectedWeapon || _weapon == null){
                 _weaponIndex = gunManager.GetWeaponIndex();
-                _weapon = gunManager.weaponHandlerObject.transform.GetChild(_weaponIndex).transform.GetComponent<Gun>();
+                _weapon = gunManager.weaponHandlerObject.transform.GetChild(_weaponIndex).transform.GetComponent<Weapon>();
             }
 
             weaponName.text = _weapon.weaponName;

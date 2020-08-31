@@ -13,8 +13,8 @@ public class AmmoCrate: MonoBehaviour
 
     private void RessuplyAmmo(GameObject player) //When trigger player ammo goes up.
     {
-        GunManager gunManager = player.GetComponent<GunManager>();
-        Gun gun = gunManager.weaponHandlerObject.transform.GetChild(gunManager.GetWeaponIndex()).GetComponent<Gun>();
+        WeaponManager gunManager = player.GetComponent<WeaponManager>();
+        Weapon gun = gunManager.weaponHandlerObject.transform.GetChild(gunManager.GetWeaponIndex()).GetComponent<Weapon>();
         gun.currentAmmo = gun.maxAmmo;
     }
 }
