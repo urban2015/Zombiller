@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{897B12B1-0DEF-50D9-DA6E-60DD04E08CB4}</ProjectGuid>
+    <ProjectGuid>{b1127b89-ef0d-d950-da6e-60dd04e08cb4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,15 +53,14 @@
      <Compile Include="Assets\Scripts\Player Controller\SimpleCameraFollow.cs" />
      <Compile Include="Assets\Scripts\GameUI\GameUI.cs" />
      <Compile Include="Assets\Scripts\Spawner\SpawnSystem.cs" />
-     <Compile Include="Assets\Scripts\Player Controller\shooting.cs" />
      <Compile Include="Assets\Scripts\Player Controller\DamageComponent.cs" />
      <Compile Include="Assets\Scripts\Zombies\ZombieBehavior_Follow.cs" />
      <Compile Include="Assets\Scripts\Player Controller\DeathComponent.cs" />
+     <Compile Include="Assets\Scripts\Player Controller\Weapon-Related\WeaponManager.cs" />
      <Compile Include="Assets\Scripts\Scriptable Objects\Weapon_SO.cs" />
      <Compile Include="Assets\Scripts\GameUI\Crosshair.cs" />
-     <Compile Include="Assets\Scripts\Player Controller\GunManager.cs" />
-     <Compile Include="Assets\Scripts\Player Controller\Gun.cs" />
-     <Compile Include="Assets\Scripts\Player Controller\Target.cs" />
+     <Compile Include="Assets\Scripts\Player Controller\Weapon-Related\Weapon.cs" />
+     <Compile Include="Assets\Scripts\Player Controller\Weapon-Related\Target.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />

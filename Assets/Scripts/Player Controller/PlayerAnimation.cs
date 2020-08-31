@@ -8,14 +8,14 @@ public class PlayerAnimation : MonoBehaviour
     public enum Anim{Idle, Walk, Run};
     public Anim currentAnim = Anim.Idle;
     public Animator playerAnimator;
-    GunManager gunManager;
+    WeaponManager gunManager;
     public AnimatorOverrideController aoc;
     int weaponIndex, newIndex;
 
     // Start is called before the first frame update
     void Start()
     {
-        gunManager = GetComponent<GunManager>();
+        gunManager = GetComponent<WeaponManager>();
         setAnim();
         weaponIndex = gunManager.GetWeaponIndex();
         aoc = new AnimatorOverrideController(playerAnimator.runtimeAnimatorController);
@@ -33,7 +33,7 @@ public class PlayerAnimation : MonoBehaviour
     }
 
     void updateAnimationClibs(){
-        Gun gun = gunManager.weaponHandlerObject.transform.GetChild(gunManager.GetWeaponIndex()).GetComponent<Gun>();
+        Weapon gun = gunManager.weaponHandlerObject.transform.GetChild(gunManager.GetWeaponIndex()).GetComponent<Weapon>();
         AnimationClip gunIdle = gun.animIdle, gunWalk = gun.animWalk, gunRun = gun.animRun;
         
         if (gunIdle == null){

@@ -73,9 +73,9 @@ GameObject:
   - component: {fileID: 2110873033611202573}
   - component: {fileID: 2110873033611202572}
   - component: {fileID: 2110873033611202568}
-  - component: {fileID: 1716461488406962611}
   - component: {fileID: 1945404969820429585}
   - component: {fileID: 8916046223235631424}
+  - component: {fileID: 3642917296824658132}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -143,23 +143,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0.5, z: 0}
---- !u!114 &1716461488406962611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110873033611202614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e02a98e7b61f97499a83e2b6ee47800, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponsPrefabs: []
-  weaponHandlerObject: {fileID: 2981993411319352994}
-  rayCastPoint: {fileID: 2110873034161884600}
-  currentWeapons: 0000000001000000
-  selectedWeapon: 0
 --- !u!114 &1945404969820429585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,6 +179,26 @@ MonoBehaviour:
   rb: {fileID: 0}
   playerCam: {fileID: 0}
   anim: {fileID: 0}
+--- !u!114 &3642917296824658132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110873033611202614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c8f3eb532e37046bf8e6d32d787361, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponsPrefabs:
+  - {fileID: 5555622174735356646, guid: 7bef20177c51fe444bbb8bf56cb6b6db, type: 3}
+  - {fileID: 6229198790329436137, guid: 29155e6273141564c89291b05b5fd22d, type: 3}
+  - {fileID: 6309633227798693390, guid: df2165a135511314484ba0c4016d21f6, type: 3}
+  weaponHandlerObject: {fileID: 2981993411319352994}
+  rayCastPoint: {fileID: 2110873034161884600}
+  currentWeapons: 0000000001000000
+  selectedWeapon: 0
 --- !u!1 &2110873034161884600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1190,7 +1193,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8983963631663407919}
   m_LocalRotation: {x: 0.0000000012127164, y: 3.4878763e-11, z: 0.02946026, w: 0.99956596}
-  m_LocalPosition: {x: -0.000000009544635, y: 0.002410656, z: 4.6201192e-11}
+  m_LocalPosition: {x: 0, y: 0.002410656, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1087196898911868950}

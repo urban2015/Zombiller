@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class GunManager : MonoBehaviour
+public class WeaponManager : MonoBehaviour
 {
     [SerializeField]private GameObject[] weaponsPrefabs;
     public GameObject weaponHandlerObject, rayCastPoint;
@@ -13,9 +13,9 @@ public class GunManager : MonoBehaviour
     {
         //instantiate weapon prefabs
         foreach (GameObject weapon in weaponsPrefabs){
-            if (weapon.transform.GetComponent<Gun>() != null){
+            if (weapon.transform.GetComponent<Weapon>() != null){
                 GameObject obj = Instantiate(weapon, weaponHandlerObject.transform);
-                obj.GetComponent<Gun>().rayCastPoint = rayCastPoint.transform;
+                obj.GetComponent<Weapon>().rayCastPoint = rayCastPoint.transform;
             }
         }
 
