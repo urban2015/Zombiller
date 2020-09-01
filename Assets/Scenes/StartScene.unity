@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 891727fd77d099646bd7843c11b2fa9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunManager: {fileID: 765855073}
+  gunManager: {fileID: 1459530208}
   defaultCrosshair: {fileID: 21300000, guid: f203449205c9bef479edc7f0133aea59, type: 3}
   defaultReloadingCrosshair: {fileID: 21300000, guid: 0f6b97198537aa24b8b5a1e2721dcd3d,
     type: 3}
@@ -2076,6 +2076,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3642917296824658132, guid: d790935bf61e5074cb0026c7d7d868c7,
+        type: 3}
+      propertyPath: currentWeapons.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5783597150912040411, guid: d790935bf61e5074cb0026c7d7d868c7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2509,18 +2514,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 735397879}
   m_CullTransparentMesh: 0
---- !u!114 &765855073 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1716461488406962611, guid: d790935bf61e5074cb0026c7d7d868c7,
-    type: 3}
-  m_PrefabInstance: {fileID: 663151164}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459530204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e02a98e7b61f97499a83e2b6ee47800, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &786393288
 GameObject:
   m_ObjectHideFlags: 0
@@ -3719,7 +3712,7 @@ RectTransform:
   - {fileID: 372399550}
   - {fileID: 735397880}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3829,7 +3822,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1239466510
 GameObject:
@@ -4203,7 +4196,7 @@ RectTransform:
   m_Children:
   - {fileID: 15547177}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4390,6 +4383,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7067a3c7f4f8a1c46bd24d2d5296dc03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1459530208 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3642917296824658132, guid: d790935bf61e5074cb0026c7d7d868c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 663151164}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459530204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c8f3eb532e37046bf8e6d32d787361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!54 &1459530209 stripped
@@ -5602,7 +5607,7 @@ GameObject:
   - component: {fileID: 1871623444}
   - component: {fileID: 1871623443}
   m_Layer: 0
-  m_Name: Plane (1)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5683,7 +5688,7 @@ Transform:
   m_LocalScale: {x: 20, y: 1, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1880464362
 GameObject:
@@ -5713,7 +5718,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1917851674
 GameObject:
@@ -5810,7 +5815,7 @@ RectTransform:
   - {fileID: 1332851973}
   - {fileID: 1434373185}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6660,7 +6665,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &7735328960011235975
 PrefabInstance:
@@ -6817,7 +6822,7 @@ RectTransform:
   - {fileID: 9030332555091792547}
   - {fileID: 2008102633}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6902,7 +6907,7 @@ MonoBehaviour:
   weaponName: {fileID: 1721709760}
   zombieLeft: {fileID: 173655040}
   hpComponent: {fileID: 921633052}
-  gunManager: {fileID: 765855073}
+  gunManager: {fileID: 1459530208}
 --- !u!1 &9030332555945056779
 GameObject:
   m_ObjectHideFlags: 0

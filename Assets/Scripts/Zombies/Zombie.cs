@@ -90,14 +90,6 @@ public class Zombie : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider collision)
-    {
-        if (collision.CompareTag("Bullet"))
-        {
-            Destroy(gameObject);
-            Destroy(collision.gameObject);
-        }
-    }
 
     private void ChaseTarget(Transform target, float speed)
     {
