@@ -108,8 +108,8 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
-    agentSlope: 45
-    agentClimb: 0.4
+    agentSlope: 0
+    agentClimb: 0.1
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 086f518d293a9354da05f7d5085bb1fd, type: 2}
 --- !u!1 &15547176
 GameObject:
   m_ObjectHideFlags: 0
@@ -2146,7 +2146,8 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 1459530207}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8916046223235631424, guid: d790935bf61e5074cb0026c7d7d868c7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d790935bf61e5074cb0026c7d7d868c7, type: 3}
 --- !u!1 &663601167
 GameObject:
@@ -4361,6 +4362,24 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 663151164}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1459530206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459530204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a4a79a067bc988409b68226890a61c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  walkSpeed: 3
+  runSpeed: 5
+  rb: {fileID: 1459530209}
+  playerCam: {fileID: 519420031}
+  anim: {fileID: 1459530207}
 --- !u!114 &1459530207 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1945404969820429585, guid: d790935bf61e5074cb0026c7d7d868c7,
@@ -5587,7 +5606,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &1871623443
 MeshCollider:
